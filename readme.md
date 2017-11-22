@@ -9,7 +9,10 @@
     npm run dev
     open localhost:7778
 ```
-### 
+### prod
+```bash
+    npm run prod
+```
 
 
 # main functionalities
