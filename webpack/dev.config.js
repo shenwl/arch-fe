@@ -1,3 +1,4 @@
+const path = require('path')
 const baseWebpackConfig = require('./base.config.js')
 const devWebpackPartialConfig = {
     //开启webpack watch模式，监听文件变化
