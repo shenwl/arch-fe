@@ -5,11 +5,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     //指定webpack编译上下文，process.cwd()为当前node的启动目录
-    context: path.resolve(process.cwd(), "src/app"),
+    context: path.resolve(process.cwd(), "src"),
     entry: entry,
-    //开启webpack watch模式，监听文件变化
-    watch: true,
     output: {
+        //publicPath，所有的资源都会放在/dist下面
+        publicPath: "dist/",
         path: path.resolve(process.cwd(), "dist"),
         filename: "[name].js",
     },
@@ -17,12 +17,10 @@ module.exports = {
         new ExtractTextPlugin("css/[name].css"),
         new HtmlWebpackPlugin({
             title: 'sale',
-            template: path.resolve(
-                process.cwd(), 
-                'src/base/webpack.template.html'
-            ),
-            filename: 'sale.html',
+            template: 'base/webpack.template.html',
+            //chunk可认为entry中的key, chunk（资源块）-> asset（我们所要的资源）
             chunks: ['sale'],
+            filename: 'sale.html',
         }),
     ],
     module: {
@@ -57,7 +55,7 @@ module.exports = {
                 //img原文件名后面添加
                 loader: "file-loader?name=[name]_[sha512:hash:base64:7].[ext]",
                 options: {
-                    name: 'img/[name]_[sha512:hash:base64:7].[ext]'
+                    name: 'assets/[name]_[sha512:hash:base64:7].[ext]'
                 }
             },
         ]

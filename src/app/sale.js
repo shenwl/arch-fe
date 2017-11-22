@@ -1,4 +1,6 @@
 import './sale.less'
+import React from 'react'
+import ReactDom from 'react-dom'
 
-let a = '1'
-console.log(a)
+const node = document.getElementById('root')
+ReactDom.render("Hello!", node)

@@ -2,6 +2,16 @@
 
 前端工程化脚手架
 
+# command
+
+### dev
+```bash
+    npm run dev
+    open localhost:7778
+```
+### 
+
+
 # main functionalities
 
 - npm scripts [dev product deploy]
