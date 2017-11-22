@@ -4,13 +4,12 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    //配置编译上下文
+    //指定webpack编译上下文，process.cwd()为当前node的启动目录
     context: path.resolve(process.cwd(), "src/app"),
     entry: entry,
-    //webpack watch模式，监听文件变化
+    //开启webpack watch模式，监听文件变化
     watch: true,
     output: {
-        //process.cwd()当前node的启动目录
         path: path.resolve(process.cwd(), "dist"),
         filename: "[name].js",
     },
