@@ -9,22 +9,27 @@ module.exports = {
     entry: entry,
     output: {
         //publicPath，所有的资源都会放在/dist下面
-        publicPath: "dist/",
+        publicPath: "/dist",
         path: path.resolve(process.cwd(), "dist"),
         filename: "[name].js",
     },
     plugins: [
         new ExtractTextPlugin("css/[name].css"),
         new HtmlWebpackPlugin({
-            title: 'sale',
             template: 'base/webpack.template.html',
-            //chunk可认为entry中的key, chunk（资源块）-> asset（我们所要的资源）
-            chunks: ['sale'],
-            filename: 'sale.html',
+            inject: true,
         }),
     ],
+    //手动添加，默认只有".js", ".json"
+    resolve: {
+        extensions: [".js", ".jsx", ".json"],
+    },
     module: {
         rules: [
+            {
+                test: /\.jsx?$/,
+                loader: 'babel-loader'
+            },
             {
                 test: /\.js$/,
                 loader: 'babel-loader'
