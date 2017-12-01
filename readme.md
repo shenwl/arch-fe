@@ -4,37 +4,37 @@
 
 # command
 
-### dev
-```bash
-    npm run dev
-    open localhost:7778
-```
-### prod
-```bash
-    npm run prod
-```
+### node_modules
+	```bash
+	npm install
+	```
 
+### dev
+	```bash
+	    npm run dev
+	    open localhost:7778
+	```
+### prod
+	```bash
+	    npm run prod
+	```
 
 # main functionalities
 
-- npm scripts [dev product deploy]
+	- npm scripts [dev product]
 
-- babel [ES6 ES5]
+	- babel [ES6 ES5]
 
-- webpack [img, css, js]
+	- webpack [img, css, js]
 
-- jest [单元测试]
+	- jest [单元测试]
 
-- vue/react 框架适配
+	- react 框架适配
 
 # file structure
 
-|- src    
-|-|- app    
-|-|- components    
-|-|- global     
-|-|-|- reset.css     
-
-# links
-
-[html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
+	|- src    
+	|-|- app    
+	|-|- components    
+	|-|- global     
+	|-|-|- reset.css     
