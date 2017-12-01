@@ -5,19 +5,19 @@
 # command
 
 ### node_modules
-	```bash
-	npm install
-	```
+```bash
+npm install
+```
 
 ### dev
-	```bash
-	    npm run dev
-	    open localhost:7778
-	```
+```bash
+npm run dev
+open localhost:7778
+```
 ### prod
-	```bash
-	    npm run prod
-	```
+```bash
+    npm run prod
+```
 
 # main functionalities
 
